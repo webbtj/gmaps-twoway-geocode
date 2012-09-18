@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Map Geocoder // webb.tj</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="inc.css" type="text/css"></link>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>Google Map Geocoder</h1>
+    <h3>What is it?</h3>
+    <p>I was trying to find somewhere online that I could quickly input an address and get the geo-coordinates. I know you can do this in Google Maps, but the process just didn't seem intuitive enough for me. I wanted to make it happen in one click.</p>
+    <p>Additionally I thought it'd be handy to be able to put in coordinates and get back Google's reverse geocoding results.</p>
+    <h3>How does it work?</h3>
+    <p>Input an address and hit Get Coords, or enter Lat and Lng coordinates and hit Reverse Geocode.</p>
+    <div class="left">
+        <p>
+            <label for="address">Enter Address</label>
+            <input type="text" id="address" />
+            <input type="button" id="code" value="Get Coords" />
+        </p>
+        <p>
+            <label for="lat">Lat</label>
+            <input type="text" id="lat" />
+            <label for="lng">Lng</label>
+            <input type="text" id="lng" />
+            <input type="button" id="reverse" value="Reverse Geocode" /><br />
+            <input type="button" disabled id="get-lat-lng" value="Get LatLng from Results" />
+        </p>
+        <div id="map_canvas"></div>
+    </div>
+    <div id="results"></div>
+</body>
+</html>
